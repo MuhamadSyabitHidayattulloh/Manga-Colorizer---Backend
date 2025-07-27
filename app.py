@@ -19,7 +19,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Configuration
-HUGGING_FACE_TOKEN = "HUGGING_FACE_TOKEN_REMOVED"
+HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
 MODEL_URL = "https://api-inference.huggingface.co/models/Keiser41/Example_Based_Manga_Colorization"
 UPLOAD_FOLDER = 'uploads'
 RESULTS_FOLDER = 'results'
